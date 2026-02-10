@@ -1,4 +1,4 @@
-# wkteam-api-sdk（wkteam.cn `api-wen-dang2`）
+# wkteam-api-sdk
 
 本仓库基于api离线文档，交付一套 **工程可用** 的 SDK：
 
