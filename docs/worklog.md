@@ -435,3 +435,21 @@
 
 **Notes**
 - 若后续初始化 git 且已误追踪 `docs/api/`，需执行 `git rm --cached -r docs/api`（保留本地目录内容不变）。
+
+---
+
+### 开源发布：初始化 Git + 创建 GitHub 公共仓库并推送
+
+- When: `2026-02-10 21:25`（本地）
+- Who: `agent`
+- Context: 用户要求将本项目提交为开源仓库；并要求 `docs/api/`、`AGENTS.md`、`DOCS_INDEX.md` 不进入开源仓库（仅本地保留）。
+
+**Commands run（关键）**
+- `git init -b main`
+- `git add -A`
+- `git commit -m "Initial open-source release (MIT)"`
+- `gh repo create wkteam-api-sdk --public --source=. --remote=origin --push`
+
+**Result**
+- GitHub 仓库已创建并推送：`https://github.com/okwinds/wkteam-api-sdk`
+- `AGENTS.md`、`DOCS_INDEX.md`、`docs/api/` 在本地保留但不会进入开源仓库（由 `.gitignore` 控制）
