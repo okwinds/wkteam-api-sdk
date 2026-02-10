@@ -54,3 +54,6 @@ build/
 
 # Private offline docs (local only)
 docs/api/
+
+# Local-only worklog (do not publish)
+docs/worklog.md
