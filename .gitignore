@@ -57,3 +57,8 @@ docs/api/
 
 # Local-only worklog (do not publish)
 docs/worklog.md
+
+# Local-only docs (do not publish)
+docs/task-summaries/
+docs/templates/
+docs/testing-strategy.md
