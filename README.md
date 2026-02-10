@@ -97,7 +97,7 @@ async def main() -> None:
 asyncio.run(main())
 ```
 
-## 如何从离线文档定位到 SDK 方法（不糊弄版）
+## 如何从离线文档定位到 SDK 方法
 
 权威离线文档在 `docs/api/api-wen-dang2/`，每个接口 Markdown 里会有 `请求URL`、`请求方式`、`请求头Headers`、参数表等信息。
 
@@ -119,16 +119,6 @@ asyncio.run(main())
 
 更完整的 Python SDK 使用、配置项解释与开发命令见：`src/python-sdk/README.md`（包含 sync/async、重试、hook、脱敏等）。
 
-## 文档入口
-
-- 工程规格入口：`docs/specs/engineering-spec/SPEC_INDEX.md`
-- 许可证：`LICENSE`（MIT）
-
-## 关于离线文档 `docs/api/`（重要）
-
-- `docs/api/` 是从第三方站点抓取的离线文档，**不进入开源仓库**（已在 `.gitignore` 中排除）。
-- SDK 的 codegen/覆盖性门槛依赖这些离线文档；开源仓库使用者需要自行获取并放置到 `docs/api/` 后再运行生成器。
-
 ## 开发与验证（仓库内）
 
 ```bash
@@ -145,9 +135,3 @@ cd ../../
 python3.11 src/python-sdk/tools/generate_sdk.py
 PYTHONPATH=src/python-sdk python3.11 -m pytest -q src/python-sdk/tests
 ```
-
-## 开源发布前检查清单（建议）
-
-- 确认 `docs/api/` 等内容的**版权/授权**允许公开（尤其是来自第三方站点的离线抓取文档）。本仓库当前选择：不公开、不入库。
-- 再跑一遍 secrets 扫描（避免 token/私钥进入历史）。
-- 补齐社区文件（可选但建议）：`CONTRIBUTING.md`、`SECURITY.md`、`CODE_OF_CONDUCT.md`、`NOTICE`。
