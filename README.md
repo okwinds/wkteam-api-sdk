@@ -1,6 +1,6 @@
 # wkteam-api-sdk（wkteam.cn `api-wen-dang2`）
 
-本仓库基于 `https://wkteam.cn/api-wen-dang2/` 的离线文档，交付一套 **工程可用** 的 SDK：
+本仓库基于api离线文档，交付一套 **工程可用** 的 SDK：
 
 - 以 `docs/api/` 为权威输入（离线 Markdown）
 - 以 `docs/specs/engineering-spec/` 为可复刻级工程规格（Spec-Driven）
